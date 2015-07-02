@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- 
 /*-
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.-
@@ -39,8 +40,9 @@
  * only if the new code is made subject to such option by the copyright-
  * holder.-
  */ -
---> 
+-->
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -48,18 +50,51 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="150.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml" fx:controller="screensframework.Screen2Controller">
-  <children>
-    <VBox alignment="CENTER" prefHeight="174.0" prefWidth="135.9998779296875" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <children>
-        <Label text="Screen 2">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
-        <Button mnemonicParsing="false" onAction="#goToScreen1" text="Go to Screen1" />
-        <Button mnemonicParsing="false" onAction="#goToScreen3" text="Go To Screen3" />
-      </children>
-    </VBox>
-  </children>
+<AnchorPane id="AnchorPane" minHeight="122.0" prefHeight="776.0" prefWidth="1616.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.CarregarArquivoController">
+   <children>
+      <BorderPane prefHeight="876.0" prefWidth="1616.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Inicial">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="CarregarArquivo" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="69.0" layoutY="53.0" mnemonicParsing="false" onAction="#carregarArquivo" prefHeight="25.0" prefWidth="150.0" text="Selecione um arquivo..." />
+                  <Label layoutX="65.0" layoutY="20.0" prefHeight="0.0" prefWidth="259.0" text="Por favor selecionar um arquivo:" />
+                  <TableView fx:id="participantesView" layoutX="66.0" layoutY="86.0" prefHeight="578.0" prefWidth="1482.0">
+                    <columns>
+                      <TableColumn prefWidth="109.0" text="CODIGO FICHA" />
+                      <TableColumn prefWidth="81.0" text="COMEERJ" />
+                        <TableColumn prefWidth="107.0" text="NUMERO FICHA" />
+                        <TableColumn minWidth="3.0" prefWidth="95.0" text="PARTICIPACAO" />
+                        <TableColumn prefWidth="101.0" text="COMISSAO" />
+                        <TableColumn prefWidth="131.0" text="DATA NASCIMENTO" />
+                        <TableColumn prefWidth="557.0" text="NOME COMPLETO" />
+                        <TableColumn prefWidth="153.0" text="CRACHA" />
+                        <TableColumn prefWidth="147.0" text="SEXO" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
 </AnchorPane>

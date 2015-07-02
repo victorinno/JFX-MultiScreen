@@ -51,7 +51,7 @@ import javafx.fxml.Initializable;
  *
  * @author Angie
  */
-public class Screen2Controller implements Initializable , ControlledScreen {
+public class MainController implements Initializable, ControlledScreen {
 
     ScreensController myController;
     /**
@@ -67,8 +67,8 @@ public class Screen2Controller implements Initializable , ControlledScreen {
     }
 
     @FXML
-    private void goToScreen1(ActionEvent event){
-       myController.setScreen(ScreensFramework.screen1ID);
+    private void goToCarregarArquivo(ActionEvent event){
+       myController.setScreen(ScreensFramework.screen2ID);
     }
     
     @FXML

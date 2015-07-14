@@ -45,11 +45,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.FileChooser;
 import screensframework.model.Participante;
@@ -65,8 +67,25 @@ public class CarregarArquivoController implements Initializable, ControlledScree
 
     @FXML
     private TableView<Participante> participantesView = new TableView<>();
-
+    
     @FXML
+    private TableColumn<Participante, Integer> codFicha = new TableColumn<>();
+    @FXML
+    private TableColumn<Participante, Integer> numeroFicha = new TableColumn<>();
+    @FXML
+    private TableColumn<Participante, String> participacao = new TableColumn<>();
+    @FXML
+    private TableColumn<Participante, String> comissao = new TableColumn<>();
+    @FXML
+    private TableColumn<Participante, LocalDate> dataNascimento = new TableColumn<>();
+    @FXML
+    private TableColumn<Participante, String> nomeCompleto = new TableColumn<>();
+    @FXML
+    private TableColumn<Participante, String> cracha = new TableColumn<>();
+    @FXML
+    private TableColumn<Participante, String> sexo = new TableColumn<>();
+
+   /* @FXML
     private Label codFicha;
     @FXML
     private Label comeerj;
@@ -83,7 +102,8 @@ public class CarregarArquivoController implements Initializable, ControlledScree
     @FXML
     private Label cracha;
     @FXML
-    private Label sexo;
+    private Label sexo;*/
+    
     private ScreensFramework mainApp;
 
     /**
@@ -130,8 +150,16 @@ public class CarregarArquivoController implements Initializable, ControlledScree
 
                     Participante p = new Participante(dados);
                     participantesView.getItems().add(p);
-                    System.out.println(p);
+
                 }
+                codFicha.setCellValueFactory(c-> new ReadOnlyObjectWrapper<>(c.getValue().getCodFIchaInscricao()));
+                numeroFicha.setCellValueFactory(c-> new ReadOnlyObjectWrapper<>(c.getValue().getNumFichaInscricao()));
+                participacao.setCellValueFactory(c-> new ReadOnlyObjectWrapper<>(c.getValue().getDscTipoParicipacao()));
+                comissao.setCellValueFactory(c-> new ReadOnlyObjectWrapper<>(c.getValue().getDscTipoComissao()));
+                dataNascimento.setCellValueFactory(c-> new ReadOnlyObjectWrapper<>(c.getValue().getDatNascimento()));
+                nomeCompleto.setCellValueFactory(c-> new ReadOnlyObjectWrapper<>(c.getValue().getNomCompleto()));
+                cracha.setCellValueFactory(c-> new ReadOnlyObjectWrapper<>(c.getValue().getNomCracha()));
+                sexo.setCellValueFactory(c-> new ReadOnlyObjectWrapper<>(c.getValue().getCodSexo()));
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();

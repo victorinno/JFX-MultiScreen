@@ -59,120 +59,124 @@ public class Participante {
         this.qtdOutraCOMEERJ = new SimpleIntegerProperty(Integer.valueOf(dados[26]));
     }
 
-    public IntegerProperty getCodFIchaInscricao() {
+    public Integer getCodFIchaInscricao() {
+        return codFIchaInscricao.get();
+    }
+
+    public void setCodFIchaInscricao(Integer codFIchaInscricao) {
+        this.codFIchaInscricao.set(codFIchaInscricao);
+    }
+    
+    public IntegerProperty codFIchaInscricao() {
         return codFIchaInscricao;
     }
 
-    public void setCodFIchaInscricao(IntegerProperty codFIchaInscricao) {
-        this.codFIchaInscricao = codFIchaInscricao;
-    }
-
-    public IntegerProperty getNumCOMEERJ() {
-        return numCOMEERJ;
+    public Integer getNumCOMEERJ() {
+        return numCOMEERJ.get();
     }
 
     public void setNumCOMEERJ(IntegerProperty numCOMEERJ) {
         this.numCOMEERJ = numCOMEERJ;
     }
 
-    public IntegerProperty getNumFichaInscricao() {
-        return numFichaInscricao;
+    public Integer getNumFichaInscricao() {
+        return numFichaInscricao.get();
     }
 
     public void setNumFichaInscricao(IntegerProperty numFichaInscricao) {
         this.numFichaInscricao = numFichaInscricao;
     }
 
-    public StringProperty getDscTipoParicipacao() {
-        return dscTipoParicipacao;
+    public String getDscTipoParicipacao() {
+        return dscTipoParicipacao.get();
     }
 
     public void setDscTipoParicipacao(StringProperty dscTipoParicipacao) {
         this.dscTipoParicipacao = dscTipoParicipacao;
     }
 
-    public StringProperty getDscTipoComissao() {
-        return dscTipoComissao;
+    public String getDscTipoComissao() {
+        return dscTipoComissao.get();
     }
 
     public void setDscTipoComissao(StringProperty dscTipoComissao) {
         this.dscTipoComissao = dscTipoComissao;
     }
 
-    public ObjectProperty<LocalDate> getDatNascimento() {
-        return datNascimento;
+    public LocalDate getDatNascimento() {
+        return datNascimento.get();
     }
 
     public void setDatNascimento(ObjectProperty<LocalDate> datNascimento) {
         this.datNascimento = datNascimento;
     }
 
-    public StringProperty getDscProfissao() {
-        return dscProfissao;
+    public String getDscProfissao() {
+        return dscProfissao.get();
     }
 
     public void setDscProfissao(StringProperty dscProfissao) {
         this.dscProfissao = dscProfissao;
     }
 
-    public StringProperty getCodOpcao1Polo() {
-        return codOpcao1Polo;
+    public String getCodOpcao1Polo() {
+        return codOpcao1Polo.get();
     }
 
     public void setCodOpcao1Polo(StringProperty codOpcao1Polo) {
         this.codOpcao1Polo = codOpcao1Polo;
     }
 
-    public StringProperty getCodOpcao2Polo() {
-        return codOpcao2Polo;
+    public String getCodOpcao2Polo() {
+        return codOpcao2Polo.get();
     }
 
     public void setCodOpcao2Polo(StringProperty codOpcao2Polo) {
         this.codOpcao2Polo = codOpcao2Polo;
     }
 
-    public StringProperty getNomCompleto() {
-        return nomCompleto;
+    public String getNomCompleto() {
+        return nomCompleto.get();
     }
 
     public void setNomCompleto(StringProperty nomCompleto) {
         this.nomCompleto = nomCompleto;
     }
 
-    public StringProperty getCodSexo() {
-        return codSexo;
+    public String getCodSexo() {
+        return codSexo.get();
     }
 
     public void setCodSexo(StringProperty codSexo) {
         this.codSexo = codSexo;
     }
 
-    public StringProperty getNomCracha() {
-        return nomCracha;
+    public String getNomCracha() {
+        return nomCracha.get();
     }
 
     public void setNomCracha(StringProperty nomCracha) {
         this.nomCracha = nomCracha;
     }
 
-    public StringProperty getDscEmail() {
-        return dscEmail;
+    public String getDscEmail() {
+        return dscEmail.get();
     }
 
     public void setDscEmail(StringProperty dscEmail) {
         this.dscEmail = dscEmail;
     }
 
-    public StringProperty getIndoutraCOMEERJ() {
-        return indoutraCOMEERJ;
+    public String getIndoutraCOMEERJ() {
+        return indoutraCOMEERJ.get();
     }
 
     public void setIndoutraCOMEERJ(StringProperty indoutraCOMEERJ) {
         this.indoutraCOMEERJ = indoutraCOMEERJ;
     }
 
-    public IntegerProperty getQtdOutraCOMEERJ() {
-        return qtdOutraCOMEERJ;
+    public Integer getQtdOutraCOMEERJ() {
+        return qtdOutraCOMEERJ.get();
     }
 
     public void setQtdOutraCOMEERJ(IntegerProperty qtdOutraCOMEERJ) {
